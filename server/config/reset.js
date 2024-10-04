@@ -31,7 +31,7 @@ const seedBridgesTable = async () => {
 
     bridgeData.forEach((bridge) => {
         const insertQuery = {
-            text: 'INSERT INTO bridges (name, cost, city, image, description, completedOn, submittedBy) VALUES ($1, $2, $3, $4, $5, $6, $7)'
+            text: 'INSERT INTO bridges (name, cost, city, image, description, submittedBy, completedOn) VALUES ($1, $2, $3, $4, $5, $6, $7)'
         }
 
         const values = [
@@ -40,8 +40,8 @@ const seedBridgesTable = async () => {
             bridge.city,
             bridge.image,
             bridge.description,
-            bridge.completedOn,
-            bridge.submittedBy
+            bridge.submittedBy,
+            bridge.completedOn
         ]
 
         pool.query(insertQuery, values, (err, res) => {

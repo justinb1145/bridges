@@ -3,7 +3,7 @@ const renderBridges = async () => {
     const response = await fetch('/bridges')
     const data = await response.json()
 
-    const mainContent = document.getElementById('main-content')
+    const bridgeContent = document.getElementById('bridge-content')
 
     if (data) {
 
@@ -23,13 +23,13 @@ const renderBridges = async () => {
             name.textContent = bridge.name
             bottomContainer.appendChild(name)
 
-            const pricePoint = document.createElement('p')
-            pricePoint.textContent = 'Price: ' + bridge.pricePoint
-            bottomContainer.appendChild(pricePoint)
+            const cost = document.createElement('p')
+            cost.textContent = 'Cost: ' + bridge.cost
+            bottomContainer.appendChild(cost)
 
-            const audience = document.createElement('p')
-            audience.textContent = 'Great For: ' + bridge.audience
-            bottomContainer.appendChild(audience)
+            const city = document.createElement('p')
+            city.textContent = 'City: ' + bridge.city
+            bottomContainer.appendChild(city)
 
             const link = document.createElement('a')
             link.textContent = 'Read More >'
@@ -39,13 +39,13 @@ const renderBridges = async () => {
 
             card.appendChild(topContainer)
             card.appendChild(bottomContainer) 
-            mainContent.appendChild(card)
+            bridgeContent.appendChild(card)
         })
     }
     else {
         const message = document.createElement('h2')
         message.textContent = 'No image Available 😞'
-        mainContent.appendChild(message)
+        bridgeContent.appendChild(message)
     }
 }
 

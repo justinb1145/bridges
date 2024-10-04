@@ -7,7 +7,7 @@ const headerLeft = document.createElement('div')
 headerLeft.className = 'header-left'
 
 const headerLogo = document.createElement('img')
-headerLogo.src = '/logo.png'
+headerLogo.src = '/globe.png'
 
 const headerTitle = document.createElement('h1')
 headerTitle.textContent = 'World Bridges'

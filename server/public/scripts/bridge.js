@@ -13,9 +13,9 @@ const renderBridge = async () => {
     if (bridge) {
         document.getElementById('image').src = bridge.image
         document.getElementById('name').textContent = bridge.name
-        document.getElementById('submittedBy').textContent = 'Submitted by: ' + bridge.submittedBy
-        document.getElementById('pricePoint').textContent = 'Price: ' + bridge.pricePoint
-        document.getElementById('audience').textContent = 'Great For: ' + bridge.audience
+        document.getElementById('submittedBy').textContent = 'Submitted By: ' + bridge.submittedBy
+        document.getElementById('cost').textContent = 'Cost: ' + bridge.cost
+        document.getElementById('city').textContent = 'City: ' + bridge.city
         document.getElementById('description').textContent = bridge.description
         document.title = `World Bridges - ${bridge.name}`
       
